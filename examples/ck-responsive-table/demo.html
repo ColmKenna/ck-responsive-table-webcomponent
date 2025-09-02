@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ck-responsive-table Demo</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body { padding: 2rem; }
+    :root { --colour-border: #dee2e6; }
+  </style>
+  <script type="module" src="../../dist/index.esm.js"></script>
+</head>
+<body>
+
+  <h1><code>&lt;ck-responsive-table&gt;</code> Demo</h1>
+
+  <p>Resize your browser window to see the table adapt. The mobile layout will trigger at 768px for the first example and 500px for the second.</p>
+
+  <hr>
+
+  <h2>Advanced Example</h2>
+  <p>This example uses Bootstrap classes (`table`, `table-bordered`), alignment attributes, and mobile layout helpers.</p>
+
+  <ck-responsive-table class="table table-bordered" mobile-breakpoint="768px">
+    <ck-responsive-thead>
+      <ck-responsive-col-head>User</ck-responsive-col-head>
+      <ck-responsive-col-head align="center">Plan</ck-responsive-col-head>
+      <ck-responsive-col-head align="right" mobile-align="right" mobile-no-label="true">Actions</ck-responsive-col-head>
+    </ck-responsive-thead>
+    <ck-responsive-tbody>
+      <ck-responsive-row>
+        <ck-responsive-col>
+          <strong>John Doe</strong><br>
+          <small>john.doe@example.com</small>
+        </ck-responsive-col>
+        <ck-responsive-col>
+          Premium
+        </ck-responsive-col>
+        <ck-responsive-col mobile-direction="row" mobile-justify="flex-end">
+          <button class="btn btn-sm btn-primary">Edit</button>
+          <button class="btn btn-sm btn-danger ml-2">Remove</button>
+        </ck-responsive-col>
+      </ck-responsive-row>
+      <ck-responsive-row>
+        <ck-responsive-col>
+          <strong>Jane Smith</strong><br>
+          <small>jane.smith@example.com</small>
+        </ck-responsive-col>
+        <ck-responsive-col>
+          Basic
+        </ck-responsive-col>
+        <ck-responsive-col mobile-direction="row" mobile-justify="flex-end">
+          <button class="btn btn-sm btn-primary">Edit</button>
+          <button class="btn btn-sm btn-danger ml-2">Remove</button>
+        </ck-responsive-col>
+      </ck-responsive-row>
+    </ck-responsive-tbody>
+  </ck-responsive-table>
+
+  <hr>
+
+  <h2>Basic Example</h2>
+  <p>A standard table with default settings.</p>
+
+  <ck-responsive-table class="table" mobile-breakpoint="500px">
+    <ck-responsive-thead>
+      <ck-responsive-col-head>First Name</ck-responsive-col-head>
+      <ck-responsive-col-head>Last Name</ck-responsive-col-head>
+      <ck-responsive-col-head>Age</ck-responsive-col-head>
+    </ck-responsive-thead>
+    <ck-responsive-tbody>
+      <ck-responsive-row>
+        <ck-responsive-col>Alice</ck-responsive-col>
+        <ck-responsive-col>Williams</ck-responsive-col>
+        <ck-responsive-col>32</ck-responsive-col>
+      </ck-responsive-row>
+      <ck-responsive-row>
+        <ck-responsive-col>Bob</ck-responsive-col>
+        <ck-responsive-col>Brown</ck-responsive-col>
+        <ck-responsive-col>45</ck-responsive-col>
+      </ck-responsive-row>
+    </ck-responsive-tbody>
+  </ck-responsive-table>
+
+</body>
+</html>
