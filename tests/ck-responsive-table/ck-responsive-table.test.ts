@@ -1,4 +1,3 @@
-
 import '../../src/components/ck-responsive-table/ck-responsive-table';
 
 document.body.innerHTML = `

@@ -37,6 +37,7 @@
   "ignorePatterns": [
     "dist/",
     "node_modules/",
-    "rollup.config.js"
+    "rollup.config.js",
+    "**/*.d.ts"
   ]
 }
